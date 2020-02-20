@@ -8,9 +8,14 @@ eureka:
     register-with-eureka: false
     fetch-registry: true
 
+
 zuul:
   routes:
     flash-card-service:
       path: /flash-cards/*
       strip-prefix: true
       serviceId: flash-card-service
+    user-service:
+      path: /users/*
+      strip-prefix: true
+      serviceId: user-service
